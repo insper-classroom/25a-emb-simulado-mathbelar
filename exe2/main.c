@@ -13,14 +13,14 @@
 
 const int sensor1_trig = 13;
 const int sensor1_echo = 12;
-uint64_t tempo_inicial_1;
-uint64_t tempo_final_1;
+volatile uint64_t tempo_inicial_1; // tem que ser volatile para ser atualizado no callback
+volatile uint64_t tempo_final_1;
 
 
 const int sensor2_trig = 19;
 const int sensor2_echo = 18;
-uint64_t tempo_inicial_2;
-uint64_t tempo_final_2;
+volatile uint64_t tempo_inicial_2;
+volatile uint64_t tempo_final_2;
 // trigger envia
 // echo recebe
 
